@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../css/browser/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/business/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../js/basic/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../js/basic/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <!--<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">宠小格</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">客服</a></li>
+            <li><a href="#">更新</a></li>
+            <li><a href="#">通知</a></li>
+            <li><a href="#">店长</a></li>
+            <li><a href="#">安全退出</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+         <!-- <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+          </ul>-->
+          <ul class="nav nav-sidebar">
+            <li><a onclick="itemChoose('memberList')">会员</a></li>
+            <li><a onclick="itemChoose('cash')">收银</a></li>
+            <li><a onclick="itemChoose('appointment')">预约</a></li>
+            <li><a onclick="itemChoose('entrust')">寄养</a></li>
+            <li><a onclick="itemChoose('stock')">库存</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a onclick="itemChoose('message')">消息</a></li>
+            <li><a onclick="itemChoose('report')">报表</a></li>
+            <li><a onclick="itemChoose('setting')">设置</a></li>
+          </ul>
+        </div>
+        <div id="memberList" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h2 class="sub-header">会员列表</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>主人姓名</th>
+                  <th>卡号</th>
+                  <th>等级</th>
+                  <th>电话</th>
+                  <th>宠物名称</th>
+                  <th>宠物品种</th>
+                  <th>宠物生日</th>
+                  <th>宠物性别</th>
+                  <th>余额</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>张三</td>
+                  <td>100001</td>
+                  <td>A</td>
+                  <td>13812341234</td>
+                  <td>豆豆</td>
+                  <td>拉布拉多</td>
+                  <td>2016/12/12</td>
+                  <td>女宝</td>
+                  <td>10000</td>
+                  <td>消费</td>
+                </tr>
+                <tr>
+                  <td>李四</td>
+                  <td>100002</td>
+                  <td>B</td>
+                  <td>13812341200</td>
+                  <td>毛毛</td>
+                  <td>哈士奇</td>
+                  <td>2014/12/10</td>
+                  <td>男宝</td>
+                  <td>20000</td>
+                  <td>消费</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+          <div id="cash" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+              <h2 class="sub-header">收银</h2>
+              <div class="table-responsive">
+                  <table class="table table-striped">
+                      <thead>
+                      <tr>
+                          <th>主人姓名</th>
+                          <th>卡号</th>
+                          <th>等级</th>
+                          <th>电话</th>
+                          <th>宠物名称</th>
+                          <th>宠物品种</th>
+                          <th>宠物生日</th>
+                          <th>宠物性别</th>
+                          <th>余额</th>
+                          <th>操作</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <td>张三</td>
+                          <td>100001</td>
+                          <td>A</td>
+                          <td>13812341234</td>
+                          <td>豆豆</td>
+                          <td>拉布拉多</td>
+                          <td>2016/12/12</td>
+                          <td>女宝</td>
+                          <td>10000</td>
+                          <td>消费</td>
+                      </tr>
+                      <tr>
+                          <td>李四</td>
+                          <td>100002</td>
+                          <td>B</td>
+                          <td>13812341200</td>
+                          <td>毛毛</td>
+                          <td>哈士奇</td>
+                          <td>2014/12/10</td>
+                          <td>男宝</td>
+                          <td>20000</td>
+                          <td>消费</td>
+                      </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+          <div id="appointment" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+              <h2 class="sub-header">预约</h2>
+              <div class="table-responsive">
+                  <table class="table table-striped">
+                      <thead>
+                      <tr>
+                          <th>主人姓名</th>
+                          <th>卡号</th>
+                          <th>等级</th>
+                          <th>电话</th>
+                          <th>宠物名称</th>
+                          <th>宠物品种</th>
+                          <th>宠物生日</th>
+                          <th>宠物性别</th>
+                          <th>余额</th>
+                          <th>操作</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <td>张三</td>
+                          <td>100001</td>
+                          <td>A</td>
+                          <td>13812341234</td>
+                          <td>豆豆</td>
+                          <td>拉布拉多</td>
+                          <td>2016/12/12</td>
+                          <td>女宝</td>
+                          <td>10000</td>
+                          <td>消费</td>
+                      </tr>
+                      <tr>
+                          <td>李四</td>
+                          <td>100002</td>
+                          <td>B</td>
+                          <td>13812341200</td>
+                          <td>毛毛</td>
+                          <td>哈士奇</td>
+                          <td>2014/12/10</td>
+                          <td>男宝</td>
+                          <td>20000</td>
+                          <td>消费</td>
+                      </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+          <div id="entrust" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+              <h2 class="sub-header">寄养</h2>
+              <div class="table-responsive">
+                  <table class="table table-striped">
+                      <thead>
+                      <tr>
+                          <th>主人姓名</th>
+                          <th>卡号</th>
+                          <th>等级</th>
+                          <th>电话</th>
+                          <th>宠物名称</th>
+                          <th>宠物品种</th>
+                          <th>宠物生日</th>
+                          <th>宠物性别</th>
+                          <th>余额</th>
+                          <th>操作</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <td>张三</td>
+                          <td>100001</td>
+                          <td>A</td>
+                          <td>13812341234</td>
+                          <td>豆豆</td>
+                          <td>拉布拉多</td>
+                          <td>2016/12/12</td>
+                          <td>女宝</td>
+                          <td>10000</td>
+                          <td>消费</td>
+                      </tr>
+                      <tr>
+                          <td>李四</td>
+                          <td>100002</td>
+                          <td>B</td>
+                          <td>13812341200</td>
+                          <td>毛毛</td>
+                          <td>哈士奇</td>
+                          <td>2014/12/10</td>
+                          <td>男宝</td>
+                          <td>20000</td>
+                          <td>消费</td>
+                      </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+          <div id="stock" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+              <h2 class="sub-header">库存</h2>
+              <div class="table-responsive">
+                  <table class="table table-striped">
+                      <thead>
+                      <tr>
+                          <th>主人姓名</th>
+                          <th>卡号</th>
+                          <th>等级</th>
+                          <th>电话</th>
+                          <th>宠物名称</th>
+                          <th>宠物品种</th>
+                          <th>宠物生日</th>
+                          <th>宠物性别</th>
+                          <th>余额</th>
+                          <th>操作</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <td>张三</td>
+                          <td>100001</td>
+                          <td>A</td>
+                          <td>13812341234</td>
+                          <td>豆豆</td>
+                          <td>拉布拉多</td>
+                          <td>2016/12/12</td>
+                          <td>女宝</td>
+                          <td>10000</td>
+                          <td>消费</td>
+                      </tr>
+                      <tr>
+                          <td>李四</td>
+                          <td>100002</td>
+                          <td>B</td>
+                          <td>13812341200</td>
+                          <td>毛毛</td>
+                          <td>哈士奇</td>
+                          <td>2014/12/10</td>
+                          <td>男宝</td>
+                          <td>20000</td>
+                          <td>消费</td>
+                      </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+          <div id="message" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+              <h2 class="sub-header">消息</h2>
+              <div class="table-responsive">
+                  <table class="table table-striped">
+                      <thead>
+                      <tr>
+                          <th>主人姓名</th>
+                          <th>卡号</th>
+                          <th>等级</th>
+                          <th>电话</th>
+                          <th>宠物名称</th>
+                          <th>宠物品种</th>
+                          <th>宠物生日</th>
+                          <th>宠物性别</th>
+                          <th>余额</th>
+                          <th>操作</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <td>张三</td>
+                          <td>100001</td>
+                          <td>A</td>
+                          <td>13812341234</td>
+                          <td>豆豆</td>
+                          <td>拉布拉多</td>
+                          <td>2016/12/12</td>
+                          <td>女宝</td>
+                          <td>10000</td>
+                          <td>消费</td>
+                      </tr>
+                      <tr>
+                          <td>李四</td>
+                          <td>100002</td>
+                          <td>B</td>
+                          <td>13812341200</td>
+                          <td>毛毛</td>
+                          <td>哈士奇</td>
+                          <td>2014/12/10</td>
+                          <td>男宝</td>
+                          <td>20000</td>
+                          <td>消费</td>
+                      </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+          <div id="setting" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+              <h2 class="sub-header">设置</h2>
+              <div class="table-responsive">
+                  <table class="table table-striped">
+                      <thead>
+                      <tr>
+                          <th>主人姓名</th>
+                          <th>卡号</th>
+                          <th>等级</th>
+                          <th>电话</th>
+                          <th>宠物名称</th>
+                          <th>宠物品种</th>
+                          <th>宠物生日</th>
+                          <th>宠物性别</th>
+                          <th>余额</th>
+                          <th>操作</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <td>张三</td>
+                          <td>100001</td>
+                          <td>A</td>
+                          <td>13812341234</td>
+                          <td>豆豆</td>
+                          <td>拉布拉多</td>
+                          <td>2016/12/12</td>
+                          <td>女宝</td>
+                          <td>10000</td>
+                          <td>消费</td>
+                      </tr>
+                      <tr>
+                          <td>李四</td>
+                          <td>100002</td>
+                          <td>B</td>
+                          <td>13812341200</td>
+                          <td>毛毛</td>
+                          <td>哈士奇</td>
+                          <td>2014/12/10</td>
+                          <td>男宝</td>
+                          <td>20000</td>
+                          <td>消费</td>
+                      </tr>
+                      <tr>
+                          <td>王五</td>
+                          <td>100003</td>
+                          <td>B</td>
+                          <td>13812341200</td>
+                          <td>哈哈</td>
+                          <td>哈士奇</td>
+                          <td>2015/4/10</td>
+                          <td>男宝</td>
+                          <td>20000</td>
+                          <td>消费</td>
+                      </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+          <div id="report" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+              <h2 class="sub-header">报表</h2>
+              <div class="table-responsive">
+                  <table class="table table-striped">
+                      <thead>
+                      <tr>
+                          <th>主人姓名</th>
+                          <th>卡号</th>
+                          <th>等级</th>
+                          <th>电话</th>
+                          <th>宠物名称</th>
+                          <th>宠物品种</th>
+                          <th>宠物生日</th>
+                          <th>宠物性别</th>
+                          <th>余额</th>
+                          <th>操作</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                          <td>张三</td>
+                          <td>100001</td>
+                          <td>A</td>
+                          <td>13812341234</td>
+                          <td>豆豆</td>
+                          <td>拉布拉多</td>
+                          <td>2016/12/12</td>
+                          <td>女宝</td>
+                          <td>10000</td>
+                          <td>消费</td>
+                      </tr>
+                      <tr>
+                          <td>李四</td>
+                          <td>100002</td>
+                          <td>B</td>
+                          <td>13812341200</td>
+                          <td>毛毛</td>
+                          <td>哈士奇</td>
+                          <td>2014/12/10</td>
+                          <td>男宝</td>
+                          <td>20000</td>
+                          <td>消费</td>
+                      </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script>window.jQuery || document.write('<script src="../js/basic/jquery.min.js"><\/script>')</script>-->
+    <script src="../js/basic/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../js/basic/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/basic/ie10-viewport-bug-workaround.js"></script>
+    <script src="../js/basic/vue.js"></script>
+    <script src="../js/basic/vue-router.js"></script>
+    <!-- 页面基础逻辑 -->
+    <script src="../js/basic/index.js"></script>
+  </body>
+</html>
