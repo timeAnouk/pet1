@@ -246,7 +246,7 @@ export default {
       }
     }
   }
-  
+
   img {
     vertical-align: middle;
   }

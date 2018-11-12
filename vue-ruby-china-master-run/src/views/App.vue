@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <div>qwqdxjcnxvxvk</div>
     <HeaderComponent :tab="current" />
     <router-view></router-view>
     <FooterComponent></FooterComponent>
