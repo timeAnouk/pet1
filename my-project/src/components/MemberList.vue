@@ -1,11 +1,15 @@
 <template>
 <div class="container">
   <div class="row">
-    <div class="col">
-      <b-button  type="submit">查看详情</b-button>
+    <div class="col listBtn">
+      <b-button  type="submit">
+        <router-link to="/MemberDetail">查看详情</router-link>
+      </b-button>
       <b-button  type="submit">新增会员</b-button>
       <b-button  type="submit">删除会员</b-button>
-      <b-button  type="submit">批量导入会员</b-button>
+      <b-button  type="submit">
+        <router-link to="/BatchImport">批量导入会员</router-link>
+      </b-button>
     </div>
   </div>
   <div class="row">
@@ -58,6 +62,60 @@
         <td>31kg</td>
         <td>2岁</td>
       </tr>
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>15401669431</td>
+        <td>钻石</td>
+        <td>旺财</td>
+        <td>田园犬</td>
+        <td>31kg</td>
+        <td>2岁</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>15401669431</td>
+        <td>钻石</td>
+        <td>旺财</td>
+        <td>田园犬</td>
+        <td>31kg</td>
+        <td>2岁</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>15401669431</td>
+        <td>钻石</td>
+        <td>旺财</td>
+        <td>田园犬</td>
+        <td>31kg</td>
+        <td>2岁</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>15401669431</td>
+        <td>钻石</td>
+        <td>旺财</td>
+        <td>田园犬</td>
+        <td>31kg</td>
+        <td>2岁</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>15401669431</td>
+        <td>钻石</td>
+        <td>旺财</td>
+        <td>田园犬</td>
+        <td>31kg</td>
+        <td>2岁</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" /></td>
+        <td>15401669431</td>
+        <td>钻石</td>
+        <td>旺财</td>
+        <td>田园犬</td>
+        <td>31kg</td>
+        <td>2岁</td>
+      </tr>
       </tbody>
     </table>
   </div>
@@ -71,5 +129,7 @@
 </script>
 
 <style scoped>
-
+   .listBtn{
+     padding:1.5rem 0;
+   }
 </style>

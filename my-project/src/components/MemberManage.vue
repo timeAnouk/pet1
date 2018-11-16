@@ -6,15 +6,19 @@
     <div>
       <MemberList></MemberList>
     </div>
+    <!--<div>
+      <MemberDetail></MemberDetail>
+    </div>-->
   </div>
 </template>
 
 <script>
     import MemberSearch from "./MemberSearch";
     import MemberList from "./MemberList";
+    import MemberDetail from "./MemberDetail";
     export default {
-        name: "MemberEntry",
-      components: {MemberList, MemberSearch}
+        name: "MemberManage",
+      components: {MemberDetail, MemberList, MemberSearch}
     }
 </script>
 
