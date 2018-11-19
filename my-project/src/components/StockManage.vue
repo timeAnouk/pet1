@@ -3,7 +3,9 @@
   <div class="box-border">
     <div class="row row-box">
       <div class="col-sm divInput">
-        <b-button  type="submit">新增商品</b-button>
+        <b-button  type="submit">
+          <router-link to="/StockAdd">新增商品</router-link>
+        </b-button>
       </div>
       <div class="col-sm divInput">
         <b-button  type="submit">批量导入产品</b-button>
@@ -34,7 +36,7 @@
   </div>
 
   <div class="row">
-    <table class="table table-bordered">
+    <table class="table table-bordered table-box">
       <thead>
       <tr>
         <th scope="col">商品名称</th>
@@ -85,5 +87,10 @@
 </script>
 
 <style scoped>
-
+  .row-box{
+    padding: 15px 0;
+  }
+  .table-box{
+    margin-top: 40px;
+  }
 </style>

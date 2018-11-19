@@ -10,6 +10,7 @@ import OrderManage from '@/components/OrderManage'
 import ReportManage from '@/components/ReportManage'
 import SettingManage from '@/components/SettingManage'
 import StockManage from '@/components/StockManage'
+import StockAdd from '@/components/StockAdd'
 
 Vue.use(Router)
 
@@ -75,5 +76,12 @@ export default new Router({
       name: 'StockManage',
       component: StockManage
     },
+    //添加库存
+    {
+      path: '/StockAdd',
+      name: 'StockAdd',
+      component: StockAdd
+    },
+
   ]
 })

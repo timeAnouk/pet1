@@ -1,12 +1,17 @@
 <template>
 <div class="container">
+
+
+
   <div class="row">
     <div class="col listBtn">
       <b-button  type="submit">
         <router-link to="/MemberDetail">查看详情</router-link>
       </b-button>
-      <b-button  type="submit">新增会员</b-button>
-      <b-button  type="submit">删除会员</b-button>
+      <b-button  type="submit">
+        <router-link to="/MemberDetail">新增会员</router-link>
+      </b-button>
+      <b-button  type="submit"  v-on:click="deleteMember">删除会员</b-button>
       <b-button  type="submit">
         <router-link to="/BatchImport">批量导入会员</router-link>
       </b-button>
@@ -124,8 +129,13 @@
 
 <script>
     export default {
-        name: "MemberList"
-    }
+        name: "MemberList",
+        methods:{
+          deleteMember:function(){
+            alert("删除会员");
+          }
+        }
+    };
 </script>
 
 <style scoped>
