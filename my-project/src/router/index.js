@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Calendar from 'vue2-datepick';
 import MemberManage from '@/components/MemberManage'
 import MemberDetail from '@/components/MemberDetail'
 import BatchImport from '@/components/BatchImport'
@@ -12,7 +13,8 @@ import SettingManage from '@/components/SettingManage'
 import StockManage from '@/components/StockManage'
 import StockAdd from '@/components/StockAdd'
 
-Vue.use(Router)
+Vue.use(Router);
+Vue.use(Calendar);
 
 export default new Router({
   routes: [
