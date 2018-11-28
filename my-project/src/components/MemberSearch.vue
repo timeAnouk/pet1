@@ -27,8 +27,8 @@
       </div>
       <div class="row">
         <div class="col divInput">
-          <b-button  type="submit">查找</b-button>
-          <b-button  type="submit">重置</b-button>
+          <b-button v-on:click="checkMember">查找</b-button>
+          <b-button v-on:click="clearMember">重置</b-button>
         </div>
       </div>
     </div>
@@ -37,7 +37,15 @@
 
 <script>
     export default {
-        name: "MemberSearch"
+      name: "MemberSearch",
+      methods:{
+        checkMember:function(){
+          alert("查找会员");
+        },
+        clearMember:function(){
+          alert("清空会员");
+        },
+      }
     }
 </script>
 

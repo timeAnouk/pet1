@@ -47,4 +47,7 @@
     font-weight: 500;
     color: rgba(0,0,0,.65);
   }
+  .bd-item a{
+    color: #840228 !important;
+  }
 </style>
