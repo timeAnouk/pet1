@@ -38,8 +38,26 @@
 <script>
     export default {
       name: "MemberSearch",
+      data: function () {
+        let data = {
+          search:
+            {
+            phone:'',
+            petName:'',
+            petType:'',
+            memberName:'',
+            petWeight:'',
+            petAge:'',
+          }
+        };
+        return data;
+      },
       methods:{
         checkMember:function(){
+          alert("查找结果");
+          /*Vue.axios.get("http://localhost:8080?name=tom&age=23").then((response) => {
+        console.log(response.data)
+      })*/
           alert("查找会员");
         },
         clearMember:function(){

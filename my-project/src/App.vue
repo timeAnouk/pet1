@@ -111,7 +111,7 @@
           <input  class="txtInput" v-model="registerShop" type="text" placeholder="店名"/>
         </div>
         <div class="col-sm divInput">
-          <input type="checkbox"v-model="checkContract"/>
+          <input type="checkbox"v-model="contractTag"/>
           <label v-on:click="checkContract">
             同意宠小格服务协议和隐私条款
           </label>
@@ -148,7 +148,7 @@ export default {
       registerPwd:'',
       registerRPwd:'',
       registerShop:'',
-      checkContract:false,
+      contractTag:false,
 
     };
     return data;
@@ -234,7 +234,7 @@ export default {
         alert("不是完整的11位手机号");
         return;
       }
-      if(!this.checkContract){
+      if(!this.contractTag){
         alert("如需注册，请同意用户协议.");
         return;
       }

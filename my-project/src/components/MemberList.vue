@@ -24,102 +24,26 @@
         <th scope="col">#</th>
         <th scope="col">手机号</th>
         <th scope="col">会员等级</th>
-        <th scope="col">宠宝姓名</th>
-        <th scope="col">品类</th>
-        <th scope="col">宠宝体重</th>
-        <th scope="col">宠宝年龄</th>
+        <th scope="col">宠宝(姓名/品类/体重/年龄)</th>
       </tr>
       </thead>
       <tbody>
-      <tr>
+      <tr v-for="value in results">
         <td><input type="checkbox" /></td>
-        <td>15301669431</td>
-        <td>白银</td>
-        <td>巴顿</td>
-        <td>哈士奇</td>
-        <td>38kg</td>
-        <td>3岁</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" /></td>
-        <td>15101669431</td>
-        <td>青铜</td>
-        <td>麦麦/小九</td>
-        <td>金毛犬/波斯猫</td>
-        <td>35kg/4kg</td>
-        <td>5岁/2岁</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" /></td>
-        <td>15201669431</td>
-        <td>铂金</td>
-        <td>奶茶</td>
-        <td>边牧</td>
-        <td>7kg</td>
-        <td>3岁</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" /></td>
-        <td>15401669431</td>
-        <td>钻石</td>
-        <td>旺财</td>
-        <td>田园犬</td>
-        <td>31kg</td>
-        <td>2岁</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" /></td>
-        <td>15401669431</td>
-        <td>钻石</td>
-        <td>旺财</td>
-        <td>田园犬</td>
-        <td>31kg</td>
-        <td>2岁</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" /></td>
-        <td>15401669431</td>
-        <td>钻石</td>
-        <td>旺财</td>
-        <td>田园犬</td>
-        <td>31kg</td>
-        <td>2岁</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" /></td>
-        <td>15401669431</td>
-        <td>钻石</td>
-        <td>旺财</td>
-        <td>田园犬</td>
-        <td>31kg</td>
-        <td>2岁</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" /></td>
-        <td>15401669431</td>
-        <td>钻石</td>
-        <td>旺财</td>
-        <td>田园犬</td>
-        <td>31kg</td>
-        <td>2岁</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" /></td>
-        <td>15401669431</td>
-        <td>钻石</td>
-        <td>旺财</td>
-        <td>田园犬</td>
-        <td>31kg</td>
-        <td>2岁</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" /></td>
-        <td>15401669431</td>
-        <td>钻石</td>
-        <td>旺财</td>
-        <td>田园犬</td>
-        <td>31kg</td>
-        <td>2岁</td>
+        <td>{{value.phone}}</td>
+        <td>{{value.level}}</td>
+        <td class="pets-cell">
+          <table class="table pets-cell-table">
+            <tbody>
+            <tr  v-for="pet in value.pets">
+              <td>{{pet.petName}}</td>
+              <td>{{pet.petType}}</td>
+              <td>{{pet.petWeight}}kg</td>
+              <td>{{pet.petAge}}岁</td>
+            </tr>
+            </tbody>
+          </table>
+        </td>
       </tr>
       </tbody>
     </table>
@@ -130,6 +54,56 @@
 <script>
     export default {
         name: "MemberList",
+      data: function () {
+        let data = {
+          results:[
+            {
+              id:"1111",
+              phone:"15601011111",
+              level:"青铜",
+              pets:[
+                {
+                  id:"2222",
+                  petName:"巴顿",
+                  petType:"哈士奇",
+                  petWeight:"38",
+                  petAge:"2"
+                },
+                {
+                  id:"2223",
+                  petName:"乐乐",
+                  petType:"金毛",
+                  petWeight:"22",
+                  petAge:"2"
+                },
+                {
+                  id:"2224",
+                  petName:"闹闹",
+                  petType:"蓝猫",
+                  petWeight:"5",
+                  petAge:"2"
+                },
+
+              ]
+            },
+            {
+              id:"1111",
+              phone:"15601011111",
+              level:"青铜",
+              pets:[
+                {
+                  id:"2222",
+                  petName:"巴顿",
+                  petType:"哈士奇",
+                  petWeight:"38",
+                  petAge:"2"
+                }
+              ]
+            },
+          ],
+        };
+        return data;
+      },
         methods:{
           deleteMember:function(){
             alert("删除会员");
@@ -142,4 +116,10 @@
    .listBtn{
      padding:1.5rem 0;
    }
+  .pets-cell{
+    padding: 0 !important;
+  }
+  .pets-cell-table{
+    margin-bottom: 0 !important;
+  }
 </style>
