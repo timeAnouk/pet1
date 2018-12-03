@@ -44,7 +44,8 @@
               <router-link   to="/MemberDetail">查看详情</router-link>
             </b-button>-->
             <b-button  type="submit">
-              <router-link to="/MemberDetail">新增会员</router-link>
+              <label @click="checkPath">新增会员</label>
+              <!--<router-link to="/MemberDetail">新增会员</router-link>-->
             </b-button>
             <!--<b-button  type="submit"  v-on:click="deleteMember">删除会员</b-button>-->
             <b-button  type="submit">
@@ -173,6 +174,9 @@
         return data;
       },
       methods:{
+        checkPath:function(){
+          this.$router.push({ path: '/MemberDetail', props: this.results})
+    },
         checkMember:function(){
           if(!this.search.phone&&!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(this.search.phone))){
             alert("不是完整的11位手机号");

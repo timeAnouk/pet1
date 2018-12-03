@@ -1,21 +1,25 @@
+
 <template>
   <div class="container">
-    <div class="row"><label class="block-title">会员信息</label></div>
+    <div class="row">
+      <label class="block-title">会员信息</label>
+      <b-button  type="submit" @click="checkProps">Props信息</b-button>
+    </div>
     <div class="box-border ">
       <div class="row row-box">
         <div class="col-sm divInput">
           <form class="form-inline">
             <div class="form-group">
               <label for="inputPhone11">手机号</label>
-              <input type="text" id="inputPhone11" class="form-control mx-sm-3" >
+              <input type="text" id="inputPhone11" v-model="member.phone" class="form-control mx-sm-3" >
             </div>
           </form>
         </div>
         <div class="col-sm divInput">
           <form class="form-inline">
             <div class="form-group">
-              <label for="inputName">姓名</label>
-              <input type="text" id="inputName" class="form-control mx-sm-3" >
+              <label for="inputName" >姓名</label>
+              <input type="text" id="inputName" v-model="member.name" class="form-control mx-sm-3" >
             </div>
           </form>
         </div>
@@ -23,7 +27,7 @@
           <form class="form-inline">
             <div class="form-group">
               <label for="inputCardNo">卡号</label>
-              <input type="text" id="inputCardNo" class="form-control mx-sm-3" >
+              <input type="text" id="inputCardNo" v-model="member.cardNo" class="form-control mx-sm-3" >
             </div>
           </form>
         </div>
@@ -33,7 +37,7 @@
           <form class="form-inline">
             <div class="form-group">
               <label for="inputlevel">等&nbsp;&nbsp;&nbsp;&nbsp;级</label>
-              <input type="text" id="inputlevel" class="form-control mx-sm-3" >
+              <input type="text" id="inputlevel" v-model="member.level" class="form-control mx-sm-3" >
             </div>
           </form>
         </div>
@@ -41,7 +45,7 @@
           <form class="form-inline">
             <div class="form-group">
               <label for="inputNote">备注</label>
-              <input type="text" id="inputNote" class="form-control mx-sm-3" >
+              <input type="text" id="inputNote" v-model="member.note" class="form-control mx-sm-3" >
             </div>
           </form>
         </div>
@@ -104,14 +108,8 @@
     </div>
     <div class="row" >
       <div class="col divInput">
-        <b-button  type="submit">取消</b-button>
-        <b-button  type="submit">确定</b-button>
-      </div>
-    </div>
-    <div class="row" >
-      <div class="col divInput">
-        <b-button  type="submit">返回</b-button>
-        <b-button  type="submit">编辑信息</b-button>
+        <b-button  type="submit">编辑</b-button>
+        <b-button  type="submit" @click="addMember">提交</b-button>
       </div>
     </div>
   </div>
@@ -120,8 +118,16 @@
 <script>
     export default {
       name: "MemberDetail",
+      props:'',
       data: function () {
         let data = {
+          member:{
+            phone:'',
+            name:'',
+            cardNo:'',
+            level:'',
+            note:'',
+          },
           pets:[
             {
               id:"",
@@ -136,6 +142,10 @@
         return data;
       },
       methods:{
+        checkProps:function(){
+          console.log(this.props)
+          console.log(JSON.stringify(this.props));
+        },
         addPet:function(){
           var newPet={
               id:"",
@@ -158,7 +168,24 @@
             console.log(JSON.stringify(this.pets));
           }
 
-        }
+        },
+        addMember:function(){
+          if(!this.member.phone||!this.member.name||!this.member.cardNo||!this.member.level){
+            alert("会员必填项未填全");
+            return;
+          }
+          //console.log(JSON.stringify(this.pets));
+          var petsNameVerify=this.pets.filter((item)=>{return item.petName.length>0});
+          //console.log(JSON.stringify("petsNameVerify---"+petsNameVerify));
+          if(petsNameVerify.length!=this.pets.length){
+            alert("宠物名称不能为空");
+            return;
+          }
+          alert("成功添加手机号为"+this.member.phone+"会员");
+
+
+
+        },
       }
     }
 </script>

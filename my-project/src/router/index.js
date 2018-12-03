@@ -29,6 +29,7 @@ export default new Router({
     {
       path: '/MemberDetail',
       name: 'MemberDetail',
+      props: '',
       component: MemberDetail
     },
     //批导
