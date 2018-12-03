@@ -40,13 +40,13 @@
       <div class="container">
         <div class="row">
           <div class="col listBtn">
-            <b-button  type="submit">
+           <!-- <b-button  type="submit">
               <router-link   to="/MemberDetail">查看详情</router-link>
-            </b-button>
+            </b-button>-->
             <b-button  type="submit">
               <router-link to="/MemberDetail">新增会员</router-link>
             </b-button>
-            <b-button  type="submit"  v-on:click="deleteMember">删除会员</b-button>
+            <!--<b-button  type="submit"  v-on:click="deleteMember">删除会员</b-button>-->
             <b-button  type="submit">
               <router-link to="/BatchImport">批量导入会员</router-link>
             </b-button>
@@ -63,8 +63,13 @@
             </tr>
             </thead>
             <tbody>
-            <tr v-for="value in results">
-              <td><input type="checkbox" @click="selectMember(value.id)" /></td>
+            <tr v-for="(value,index) in results">
+              <td>
+                <b-button>
+                  <router-link   to="/MemberDetail">查看</router-link>
+                </b-button>
+                <b-button @click="deleteMember(index)">删除</b-button>
+              </td>
               <td>{{value.phone}}</td>
               <td>{{value.level}}</td>
               <td class="pets-cell">
@@ -163,13 +168,11 @@
               ]
             },
           ],
+          selectNum:[],
         };
         return data;
       },
       methods:{
-        selectMember:function(id){
-          alert(id);
-        },
         checkMember:function(){
           if(!this.search.phone&&!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(this.search.phone))){
             alert("不是完整的11位手机号");
@@ -192,9 +195,14 @@
           this.search.petAge="";
           alert("已清空搜索条件");
         },
-        deleteMember:function(){
+        checkDetail:function(index){
+          alert("查看会员");
+          ///Router.push('MemberDetail')
+          //this.results.splice(index,1);
+        },
+        deleteMember:function(index){
           alert("删除会员");
-
+          this.results.splice(index,1);
         }
       }
     }
@@ -216,8 +224,12 @@
   }
   .pets-cell-table{
     margin-bottom: 0 !important;
+    margin-top: 1rem;
   }
   .listBtn a{
+    color:#ffffff;
+  }
+  td a{
     color:#ffffff;
   }
 
